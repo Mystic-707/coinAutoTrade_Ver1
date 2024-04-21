@@ -1,8 +1,10 @@
 import pyupbit
 import winsound as sd
+import os
 
-access = "iW9QLoF5WRp0po0sRVcWV0ImAGllCar5crRpSvOK"          # 본인 값으로 변경
-secret = "zrRS9Ps7UOipuOdt7fQWxMmAhGeJW0xFlsJ27zmx"          # 본인 값으로 변경
+access = os.getenv("UPBIT_ACCESS_KEY")
+secret = os.getenv("UPBIT_SECRET_KEY")
+myToken = os.getenv("SLACK_TOKEN")
 upbit = pyupbit.Upbit(access, secret)
 
 sd.Beep(2000, 1000)

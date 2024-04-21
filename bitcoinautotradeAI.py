@@ -11,12 +11,13 @@ from tensorflow.keras.layers import LSTM, Dense
 from sklearn.preprocessing import MinMaxScaler
 import sys
 import winsound as sd
+import os
 
 TF_ENABLE_ONEDNN_OPTS=0
 
-access = "iW9QLoF5WRp0po0sRVcWV0ImAGllCar5crRpSvOK"
-secret = "zrRS9Ps7UOipuOdt7fQWxMmAhGeJW0xFlsJ27zmx"
-myToken = "xoxb-6977539637330-6977568576114-6ICO862atLDqmvtmwBumXCpm"
+access = os.getenv("UPBIT_ACCESS_KEY")
+secret = os.getenv("UPBIT_SECRET_KEY")
+myToken = os.getenv("SLACK_TOKEN")
 df = 0
 k_flag = 0
 

@@ -5,10 +5,11 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense
 from sklearn.preprocessing import MinMaxScaler
 import sys
+import os
 
 # 파라미터 설정
-access = "iW9QLoF5WRp0po0sRVcWV0ImAGllCar5crRpSvOK"
-secret = "zrRS9Ps7UOipuOdt7fQWxMmAhGeJW0xFlsJ27zmx"
+access = os.getenv("UPBIT_ACCESS_KEY")
+secret = os.getenv("UPBIT_SECRET_KEY")
 upbit = pyupbit.Upbit(access, secret)
 initial_balance = 2500000  # 초기 자본금: 250,000 KRW
 

@@ -3,10 +3,11 @@ import pyupbit
 import datetime
 import requests
 import numpy as np
+import os
 
-access = "iW9QLoF5WRp0po0sRVcWV0ImAGllCar5crRpSvOK"
-secret = "zrRS9Ps7UOipuOdt7fQWxMmAhGeJW0xFlsJ27zmx"
-myToken = "xoxb-6977539637330-6977568576114-6ICO862atLDqmvtmwBumXCpm"
+access = os.getenv("UPBIT_ACCESS_KEY")
+secret = os.getenv("UPBIT_SECRET_KEY")
+myToken = os.getenv("SLACK_TOKEN")
 
 def post_message(token, channel, text):
     """슬랙 메시지 전송"""
